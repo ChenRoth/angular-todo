@@ -7,5 +7,13 @@ import { Task } from './task';
     styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-    tasks: Task[] = [];
+    tasks: Task[] = [
+        {
+            title: 'Buy Milk',
+            isComplete: false,
+        }, {
+            title: 'Wake the Dog',
+            isComplete: true,
+        }
+    ];
 }
