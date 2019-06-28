@@ -1,2 +1,2 @@
-<input #title placeholder="type a new task" />
-<button (click)="onAdd(title.value); title.value = ''">+</button>
+<input [(ngModel)]="title" placeholder="type a new task" />
+<button (click)="onAdd()">+</button>
