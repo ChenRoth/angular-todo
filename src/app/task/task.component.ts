@@ -15,9 +15,7 @@ export class TaskComponent implements OnInit {
     ngOnInit() {
     }
 
-    onCheckboxChange(e) {
-        const isComplete = e.target.checked;
+    onCheckboxChange(isComplete: boolean) {
         this.toggleComplete.emit(isComplete);
     }
-
 }
