@@ -1,0 +1,7 @@
+.deleteButton {
+    visibility: hidden;
+}
+
+:host:hover .deleteButton {
+    visibility: visible;
+}
