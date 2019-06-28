@@ -1,2 +1,2 @@
-<input [(ngModel)]="title" placeholder="type a new task" />
+<input [(ngModel)]="title" placeholder="type a new task" (keyup.enter)="onAdd()" />
 <button (click)="onAdd()">+</button>
