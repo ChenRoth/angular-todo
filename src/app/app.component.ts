@@ -16,4 +16,8 @@ export class AppComponent {
             isComplete: true,
         }
     ];
+
+    onToggleComplete(index: number, isComplete: boolean) {
+        this.tasks[index].isComplete = isComplete;
+    }
 }

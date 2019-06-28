@@ -1,5 +1,5 @@
 <div>
-    <input type="checkbox" [checked]="task.isComplete" />
+    <input type="checkbox" [checked]="task.isComplete" (change)="onCheckboxChange($event)" />
     <span [style.textDecoration]="task.isComplete ? 'line-through' : 'unset'">
         {{task.title}}
     </span>
