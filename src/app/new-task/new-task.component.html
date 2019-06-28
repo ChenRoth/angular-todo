@@ -1,1 +1,2 @@
-<input placeholder="type a new task" />
+<input #title placeholder="type a new task" />
+<button (click)="onAdd(title.value)">+</button>

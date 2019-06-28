@@ -24,4 +24,12 @@ export class AppComponent {
     onDelete(index: number) {
         this.tasks.splice(index, 1);
     }
+
+    onTaskAdded(title: string) {
+        const task: Task = {
+            title,
+            isComplete: false,
+        };
+        this.tasks.push(task);
+    }
 }
