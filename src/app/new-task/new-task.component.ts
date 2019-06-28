@@ -26,4 +26,9 @@ export class NewTaskComponent implements OnInit {
         this.addTask.emit(this.model.title);
         this.model.title = '';
     }
+
+    onSubmit(e) {
+        this.onAdd();
+        e.target.reset();
+    }
 }

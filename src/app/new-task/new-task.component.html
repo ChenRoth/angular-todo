@@ -1,4 +1,4 @@
-<form #f="ngForm" (ngSubmit)="f.form.valid && onAdd()">
+<form #f="ngForm" (ngSubmit)="f.form.valid && onSubmit($event)">
     <input name="title" #title="ngModel" [(ngModel)]="model.title" placeholder="type a new task" required />
     <button type="submit">+</button>
     <div *ngIf="f.submitted && title.invalid">
