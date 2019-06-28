@@ -9,6 +9,7 @@ import { Task } from '../task';
 export class TaskComponent implements OnInit {
     @Input() task: Task;
     @Output() toggleComplete = new EventEmitter<boolean>();
+    @Output() delete = new EventEmitter<void>();
 
     constructor() { }
 
@@ -17,5 +18,9 @@ export class TaskComponent implements OnInit {
 
     onCheckboxChange(isComplete: boolean) {
         this.toggleComplete.emit(isComplete);
+    }
+
+    onClickDelete() {
+        this.delete.emit();
     }
 }

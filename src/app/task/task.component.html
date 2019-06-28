@@ -4,5 +4,5 @@
     <span [style.textDecoration]="task.isComplete ? 'line-through' : 'unset'">
         {{task.title}}
     </span>
-    <button class="deleteButton">&times;</button>
+    <button class="deleteButton" (click)="onClickDelete()">&times;</button>
 </div>

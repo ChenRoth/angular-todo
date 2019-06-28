@@ -20,4 +20,8 @@ export class AppComponent {
     onToggleComplete(index: number, isComplete: boolean) {
         this.tasks[index].isComplete = isComplete;
     }
+
+    onDelete(index: number) {
+        this.tasks.splice(index, 1);
+    }
 }
