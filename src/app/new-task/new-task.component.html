@@ -1,2 +1,7 @@
-<input [(ngModel)]="title" placeholder="type a new task" (keyup.enter)="onAdd()" />
-<button (click)="onAdd()">+</button>
+<form #f="ngForm" (ngSubmit)="f.form.valid && onAdd()">
+    <input name="title" #title="ngModel" [(ngModel)]="model.title" placeholder="type a new task" required />
+    <button type="submit">+</button>
+    <div *ngIf="f.submitted && title.invalid">
+        title is required
+    </div>
+</form>

@@ -6,7 +6,10 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
     styleUrls: ['./new-task.component.css']
 })
 export class NewTaskComponent implements OnInit {
-    title: string = '';
+    model = {
+        title: '',
+    };
+
 
     @Output() addTask = new EventEmitter<string>();
 
@@ -17,10 +20,10 @@ export class NewTaskComponent implements OnInit {
 
     onAdd() {
         // check if the input is empty (only whitespaces)
-        if (!this.title.trim()) {
+        if (!this.model.title.trim()) {
             return;
         }
-        this.addTask.emit(this.title);
-        this.title = '';
+        this.addTask.emit(this.model.title);
+        this.model.title = '';
     }
 }
